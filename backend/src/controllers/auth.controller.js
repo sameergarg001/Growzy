@@ -3,6 +3,7 @@ const foodpartnermodel=require('../models/foodpartner.model');
 const bcrypt=require('bcrypt');
 const jwt=require('jsonwebtoken');
 
+//user controllers
 async function registeruser(req,res){
     const {username,email,password}=req.body;
     
@@ -79,6 +80,7 @@ async function logoutuser(req,res){
     });
 }
 
+//food partner controllers
 async function registerfoodpartner(req,res){
    const {name,email,password}=req.body;
     
