@@ -1,8 +1,9 @@
 const mongoose=require('mongoose');
 
 function connectDB(){
-    mongoose.connect("mongodb+srv://growzydb:growzy1234@cluster0.v0vimca.mongodb.net/?appName=Cluster0")
+    mongoose.connect(process.env.MONGODB_URI)
     .then(()=>{
+        
         console.log("Connected to MongoDB");
     })
     .catch((err)=>{
@@ -10,3 +11,4 @@ function connectDB(){
     });
 }
 module.exports=connectDB;
+ 
